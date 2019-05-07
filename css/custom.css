@@ -1,0 +1,285 @@
+* {
+    box-sizing: border-box;
+}
+
+/* header centré à l'écran avec marges de chaque côté */
+.site-header {
+    width: 80%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/* menu en Flex pour pouvoir aligner verticalement les liens avec le module Facebook */
+.main-navigation {
+    padding-bottom: 1%;
+    text-align: center;
+    padding-left: 1vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), 85%, rgba(0, 0, 0, 0));
+}
+
+.main-navigation ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.main-navigation ul li {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.5em;
+    display: inline-block;
+    padding: 0.5em; 
+    -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+    -webkit-transition-property: background-color, color, border, -webkit-box-shadow;
+    transition-property: background-color, color, border, -webkit-box-shadow;
+    transition-property: box-shadow, background-color, color, border;
+    transition-property: box-shadow, background-color, color, border, -webkit-box-shadow;
+}
+
+.main-navigation ul li:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 5px, transparent;
+    border-radius: 5px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.main-navigation ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.facebook {
+    margin: 1vh 1vw 1vh 1vw;
+}
+
+/* Contenu centré à l'écran avec marges de chaque côté */
+.site-main {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: auto;
+    clear: both;
+}
+
+/* Image de gauche, en arrière-plan */
+.colonne-gauche {
+    background: url("../img/portrait.jpg") no-repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 49%;
+    border: solid rgba(0, 0, 0, 0.8) 10px;
+    /* Animation de défilement de plusieurs photos sur la colonne gauche */
+    animation-name: defil-photos;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+
+@keyframes defil-photos {
+  0% {
+    background: url("../img/portrait.jpg") no-repeat;
+    background-size: cover;
+    opacity: 1;
+  }
+  10% {
+    opacity: 0.85;
+  }
+  33% {
+    background: url("../img/photo71.jpg") no-repeat;
+    background-size: cover;
+    opacity: 1;
+  }
+  43% {
+    opacity: 0.85;
+  }
+  66% {
+    background: url("../img/photo81.jpg") no-repeat;
+    background-size: cover;
+    opacity: 1;
+  }
+  76% {
+    opacity: 0.85;
+  }
+  100% {
+    background: url("../img/portrait.jpg") no-repeat;
+    background-size: cover;
+    opacity: 1;
+  }
+}
+
+/* Texte de présentation, en superposition */
+.colonne-gauche:hover div {
+	display: block !important;
+}
+
+.colonne-gauche div {
+	display: none;
+	position: absolute;
+	z-index: 10;
+	left: 10%;
+	top: 10%;
+	width: 80%;
+	padding: 20px;
+
+	background: rgba(0, 0, 0, 0.8);
+	color: white;
+	border-radius: 5px;
+}
+
+/* Titre Sébastien Velly */
+.logo-titre {
+    width: 50%;
+    float: right;
+    margin-bottom: 1%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    clear: both;
+}
+
+.logo-titre img {
+    padding: 2% 20%;
+}
+
+/* Bloc actu, se positionne à droite de l'image de gauche */
+article {
+    clear: both;
+    width: 50%;
+    float: right;
+    z-index: 1;
+    border: solid rgba(0, 0, 0, 0.8) 10px;
+}
+
+.entry-header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 5px;
+    color: white;
+}
+
+.entry-header h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 3em;
+}
+
+/* Ajout d'une Div pour un arrière-plan blanc qui ne soit pas en-dessous des bordures transparentes */
+.entry-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 3% 5% 3% 5%
+}
+
+article img {
+    max-width: 100%;
+    padding: 0 20%;
+    margin-top: 3%;
+}
+
+article img#ordre_des_choses {
+    padding: 0 3%;
+    margin-top: 0;
+}
+
+/* Bloc musique, se positionne sur l'image de gauche */
+body.page-template-page-musique article {
+    width: 100%;
+}
+
+/* Vidéos Youtube */
+.fluid-width-video-wrapper {
+    padding: 2%;
+    display: inline-block;
+}
+
+/* Les images de la galerie n'ont pas de padding de 20% */
+.entry-content a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    margin-top: 2%;
+}
+
+.galery {
+    text-align: center;
+}
+
+.galery img {
+    height: 20vh;
+    margin-top: 0;
+    padding: 1% 1%;
+}
+
+/* Texte de présentation de l'album, en superposition sur la page contact*/
+.entry-content.grid-2-small-1 div {
+    position: relative;
+}
+
+.entry-content.grid-2-small-1 div:hover div {
+	display: block !important;
+}
+
+.entry-content.grid-2-small-1 div div {
+	display: none;
+	position: absolute;
+	z-index: 10;
+	left: 10%;
+	top: 10%;
+	width: 80%;
+	padding: 20px;
+	background: rgba(0, 0, 0, 0.8);
+	color: white;
+	border-radius: 5px;
+}
+
+/* Footer centré à l'écran avec marges de chaque côté */
+.site-footer {
+    clear: both;
+    text-align: center;
+    width: 80%;
+    margin: 1% auto 0 auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.site-footer p {
+    color: white;
+    padding: 1em;
+}
+
+.site-footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Pour téléphones et tablettes en portrait : l'image de gauche se met en arrière-plan */
+@media screen and (max-width: 480px), (orientation: portrait) {
+    .main-navigation ul li {
+        font-size: 1.25em;
+        padding: 0.5em 0.5em;
+    }
+    .colonne-gauche {
+        position: relative;
+        width: 100%;
+        height: 700px;
+        margin-top: 1%;
+    }
+    .logo-titre, article {
+        float: none;
+        width: 100%;
+    }
+    article img {
+        padding: 0 10%;
+    }
+    .galery img {
+        height: auto;
+        padding: 0;
+    }
+}
