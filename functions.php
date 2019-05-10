@@ -170,3 +170,4 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Remove <p></p> automatically create in the_content()
  */
 remove_filter('the_content', 'wpautop');
+

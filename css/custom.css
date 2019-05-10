@@ -190,7 +190,7 @@ article img#ordre_des_choses {
 }
 
 /* Bloc musique, se positionne sur l'image de gauche */
-body.page-template-page-musique article {
+body.page-template-page-musique article, body.page-template-page-photo article {
     width: 100%;
 }
 
@@ -213,6 +213,7 @@ body.page-template-page-musique article {
 }
 
 .galery img {
+    width: auto;
     height: 20vh;
     margin-top: 0;
     padding: 1% 1%;
