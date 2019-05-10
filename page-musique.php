@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Musique
- * description: >- The template for all others pages
+ * description: >- The template for musique pages
  * @package sebastienvelly
  */
 

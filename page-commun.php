@@ -1,7 +1,7 @@
 <?php
 /**
- * Template Name: Photo
- * description: >- The template for photo pages
+ * Template Name: Commun
+ * description: >- The template for all others pages
  * @package sebastienvelly
  */
 
@@ -18,7 +18,7 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'template-parts/content-photo', 'page' );
+			get_template_part( 'template-parts/content-commun', 'page' );
 
 		endwhile; // End of the loop.
 		?>
