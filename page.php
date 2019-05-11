@@ -11,7 +11,6 @@ get_header();
 		<main id="main" class="site-main">
 
 		<header class="logo-titre">
-			test
 			<?php echo '<img src="' . get_template_directory_uri() . '/img/titre.png" alt="Logo titre de Sébastien Velly">'; ?>
 		</header>
 	
@@ -27,7 +26,7 @@ get_header();
 		<aside class="colonne-gauche">
 			<!-- image en arrière-plan dans le css -->
 			<!-- div apparaît seulement en hover, voir dans le css -->
-			<div>
+			<div id="presentation">
 				<h3>Présentation de Sébastien Velly</h3>
 				Sébastien Velly est un auteur-compositeur-interprète brestois.
 				Musicien depuis plus de 20 ans, Sébastien Velly écrit et compose ses titres à la sauce pop-rock.

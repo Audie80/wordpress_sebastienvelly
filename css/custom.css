@@ -120,11 +120,11 @@
 }
 
 /* Texte de présentation, en superposition */
-.colonne-gauche:hover div {
+.colonne-gauche:hover #presentation {
 	display: block !important;
 }
 
-.colonne-gauche div {
+.colonne-gauche #presentation {
 	display: none;
 	position: absolute;
 	z-index: 10;
@@ -189,13 +189,13 @@ article img#ordre_des_choses {
     margin-top: 0;
 }
 
-/* Bloc musique, se positionne sur l'image de gauche */
-body.page-template-page-musique article, body.page-template-page-photo article, body.page-template-page-commun article {
+/* Bloc musique et autres, se positionne sur l'image de gauche */
+body.page-template-page-musique article, body.page-template-page-photo article, body.page-template-page-commun article, body.page-template-page-contact article {
     width: 100%;
 }
 
 /* Vidéos Youtube */
-.fluid-width-video-wrapper {
+.entry-content figure {
     padding: 2%;
     display: inline-block;
 }
@@ -206,6 +206,10 @@ body.page-template-page-musique article, body.page-template-page-photo article, 
     text-decoration: none;
     color: black;
     margin-top: 2%;
+}
+
+.entry-content a:hover {
+    font-weight: bold;
 }
 
 .galery {
@@ -229,11 +233,11 @@ body.page-template-page-musique article, body.page-template-page-photo article, 
     position: relative;
 }
 
-.entry-content.grid-2-small-1 div:hover div {
+.entry-content.grid-2-small-1 div:hover #presentation-album {
 	display: block !important;
 }
 
-.entry-content.grid-2-small-1 div div {
+.entry-content.grid-2-small-1 div #presentation-album {
 	display: none;
 	position: absolute;
 	z-index: 10;
@@ -263,6 +267,10 @@ body.page-template-page-musique article, body.page-template-page-photo article, 
 .site-footer a {
     color: white;
     text-decoration: none;
+}
+
+.site-footer a:hover {
+    font-weight: bold;
 }
 
 /* Pour téléphones et tablettes en portrait : l'image de gauche se met en arrière-plan */
