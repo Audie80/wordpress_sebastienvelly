@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying page content in page-photo.php
+ * Template part for displaying page content in page-presse.php
  * @package sebastienvelly
  */
 
@@ -36,9 +36,6 @@
         }?>
 
     </div>
-    
-        <a class="prec-suiv" href="<?php echo get_permalink(131); ?>">Page suivante</a>
-
 	  
 	</div><!-- .entry-content -->
 

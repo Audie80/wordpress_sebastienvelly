@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying page content in page-commun.php
+ * Template part for displaying page content in page-concert.php
  * @package sebastienvelly
  */
 

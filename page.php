@@ -8,12 +8,6 @@
 get_header();
 ?>
 
-		<main id="main" class="site-main">
-
-		<header class="logo-titre">
-			<?php echo '<img src="' . get_template_directory_uri() . '/img/titre.png" alt="Logo titre de Sébastien Velly">'; ?>
-		</header>
-	
 		<?php
 		while ( have_posts() ) :
 			the_post();
@@ -28,10 +22,10 @@ get_header();
 			<!-- div apparaît seulement en hover, voir dans le css -->
 			<div id="presentation">
 				<h3>Présentation de Sébastien Velly</h3>
-				Sébastien Velly est un auteur-compositeur-interprète brestois.
-				Musicien depuis plus de 20 ans, Sébastien Velly écrit et compose ses titres à la sauce pop-rock.
-				Après avoir joué en tant que guitariste et chanteur dans des groupes de reprises, il sort ses propres
-				textes, en français, depuis 2013, accompagné de 3 musiciens, Georges Guimet (batterie), Aude
+				<strong>Sébastien Velly</strong> est un <strong>auteur-compositeur-interprète</strong> brestois.
+				<strong>Musicien</strong> depuis plus de 20 ans, Sébastien Velly écrit et compose ses titres à la sauce <strong>pop-rock</strong>.
+				Après avoir joué en tant que <strong>guitariste</strong> et chanteur dans des groupes de reprises sur la région de <strong>Brest</strong>, il sort <strong>ses propres
+				textes</strong>, <strong>en français</strong>, depuis 2013, accompagné de 3 musiciens, Georges Guimet (batterie), Aude
 				Velly Menut (basse) et Sébastien Toullec (guitare).
 			</div>
 		</aside>

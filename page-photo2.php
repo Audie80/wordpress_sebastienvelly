@@ -1,18 +1,18 @@
 <?php
 /**
- * Template Name: Musique
- * description: >- The template for musique pages
+ * Template Name: Photo2
+ * description: >- The template for photo2 pages
  * @package sebastienvelly
  */
 
 get_header();
 ?>
-
+		
 		<?php
 		while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'template-parts/content-musique', 'page' );
+			get_template_part( 'template-parts/content-photo2', 'page' );
 
 		endwhile; // End of the loop.
 		?>

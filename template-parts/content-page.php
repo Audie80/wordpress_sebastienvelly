@@ -14,17 +14,11 @@
 
 	<div class="entry-content">
 
-		<?php 
-		the_title( '<h2', '</h2>' );
-		
+		<?php 		
 		the_content();
+		sebastienvelly_post_thumbnail();
+		?>
 
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'sebastienvelly' ),
-			'after'  => '</div>',
-		) );
-		
-		sebastienvelly_post_thumbnail(); ?>
 	</div><!-- .entry-content -->
 
 </article><!-- #post-<?php the_ID(); ?> -->

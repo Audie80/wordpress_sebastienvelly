@@ -7,12 +7,6 @@
 
 get_header();
 ?>
-
-		<main id="main" class="site-main">
-
-		<header class="logo-titre">
-			<?php echo '<img src="' . get_template_directory_uri() . '/img/titre.png" alt="Logo titre de Sébastien Velly">'; ?>
-		</header>
 		
 		<?php
 		while ( have_posts() ) :

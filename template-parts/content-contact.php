@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying page content in page-musique.php
+ * Template part for displaying page content in page-contact.php
  * @package sebastienvelly
  */
 
@@ -14,38 +14,29 @@
 
 	<div class="entry-content grid-2-small-1 has-gutter"> <!-- div pour le fond blanc -->
 		<div>
-			<img src="img/lordredeschoses.jpg" alt="Sébastien Velly L'ordre des choses" id="ordre_des_choses">
+			<?php sebastienvelly_post_thumbnail(); ?>
 			<!-- div apparaît seulement en hover, voir dans le css -->
 			<div id="presentation-album">
-				Après un premier EP 4 titres en 2014 « Plus proche de là-bas », le premier album est sorti en juin
-				2018, intitulé « L'ordre des choses », 12 titres mélangeant expériences personnelles et observations,
-				retraçant quatre années de musique.
-				Le deuxième album est en cours de préparation, enregistrement prévu l'hiver prochain.
-				Les nouvelles chansons seront jouées cette année en live.
+				<h3>Présentation du premier album de Sébastien Velly</h3>
+				Après un premier <strong>EP 4 titres</strong> en 2014 « <strong>Plus proche de là-bas</strong> », le <strong>premier album</strong> est sorti en juin
+				2018, intitulé « <strong>L'ordre des choses</strong> », 12 titres mélangeant expériences personnelles et observations, de style <strong>pop-rock</strong> <strong>en français</strong>,
+				retraçant quatre années de <strong>musique</strong>.
+				Le <strong>deuxième album</strong> est en cours de préparation, l'enregistrement est prévu l'hiver prochain.
+				Les <strong>nouvelles chansons</strong> seront jouées cette année en <strong>live</strong>.
 			</div>
 		</div>
 
-		<div>
-			Pour commander l'album de Sébastien Velly,
-			<br>
-			(au prix de 10€ + 1,50€ de frais de port)
-			<br>
-			Si vous souhaitez organiser un concert,
-			<br>
-			Ou pour toute autre demande,
-			<br>
-			<br>
-			Veuillez remplir le formulaire ci-dessous :
-			<br>
+		<div id="divForm">
+			<?php the_content(); ?>
 			<form action="contact.php" method="post" name="contact">
 				<label>Nom :</label><br>
 				<input type="text" name="nom"><br>
 				<label>Adresse mail :</label><br>
 				<input type="email" name="email" required><br>
 				<label>Message :</label><br>
-				<textarea name="message" rows="4" cols="50" required></textarea>
+				<textarea name="message" rows="4" required></textarea>
 				<br>
-				<input type="submit" value="envoyer">
+				<input id="envoyer" type="submit" value="Envoyer">
 			</form>
          </div>
                 

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying page content in page-photo.php
+ * Template part for displaying page content in page-photo2.php
  * @package sebastienvelly
  */
 
@@ -14,7 +14,7 @@
 
 	<div class="entry-content"> <!-- div pour le fond blanc -->
 		<div class="galery">
-
+          
           <?php
             $attachments = '';
             $attachments = get_posts( array(
@@ -37,7 +37,7 @@
 
     </div>
     
-        <a class="prec-suiv" href="<?php echo get_permalink(131); ?>">Page suivante</a>
+        <a class="prec-suiv" href="<?php echo get_permalink(82); ?>">Page précédente</a>
 
 	  
 	</div><!-- .entry-content -->
