@@ -12,7 +12,7 @@
 		<h1><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-content actu">
 
 		<?php 		
 		the_content();

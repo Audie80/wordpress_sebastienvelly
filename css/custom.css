@@ -132,7 +132,6 @@
 	top: 10%;
 	width: 80%;
 	padding: 20px;
-
 	background: rgba(0, 0, 0, 0.8);
 	color: white;
 	border-radius: 5px;
@@ -179,10 +178,19 @@ article {
 }
 
 /* Image de la page d'accueil */
-article img {
+.entry-content.actu img {
     max-width: 100%;
     padding: 0 20%;
     margin-top: 3%;
+    margin-bottom: 0;
+}
+
+/* Autres images */
+article img {
+    max-width: 100%;
+    padding: 0 10%;
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
 
 /* Image de la page contact */
@@ -194,6 +202,7 @@ article .grid-2-small-1 img {
 /* Bloc musique et autres, se positionne sur l'image de gauche */
 body.page-template-page-musique article, body.page-template-page-photo article, body.page-template-page-photo2 article, body.page-template-page-concert article, body.page-template-page-cours article, body.page-template-page-presse article, body.page-template-page-contact article {
     width: 100%;
+    position: relative;
 }
 
 /* Vidéos Youtube */
@@ -208,9 +217,11 @@ body.page-template-page-musique article, body.page-template-page-photo article, 
 /* Les images de la galerie n'ont pas de padding de 20% */
 .entry-content a {
     display: inline-block;
-    text-decoration: none;
     color: black;
-    margin-top: 2%;
+}
+
+.entry-content a.prec-suiv {
+    float: right;
 }
 
 .entry-content a:hover {
@@ -232,6 +243,7 @@ body.page-template-page-musique article, body.page-template-page-photo article, 
 .entry-content hr {
     background-color: rgba(0, 0, 0, 0.8);
     height: 1.5px;
+    margin: 0;
 }
 
 /* Texte de présentation de l'album, en superposition sur la page contact*/
@@ -295,7 +307,6 @@ body.page-template-page-musique article, body.page-template-page-photo article, 
 
 .site-footer a {
     color: white;
-    text-decoration: none;
 }
 
 .site-footer a:hover {
