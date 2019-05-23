@@ -24,7 +24,7 @@
 
 		<div id="divForm">
 			<?php the_content(); ?>
-			<form action="contact.php" method="post" name="contact">
+			<form method="post" name="contact">
 				<label>Nom :</label><br>
 				<input type="text" name="nom"><br>
 				<label>Adresse mail :</label><br>

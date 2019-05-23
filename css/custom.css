@@ -186,6 +186,7 @@ article img {
 article .grid-2-small-1 img {
     padding: 0 3%;
     margin-top: 0;
+    width: 100%;
 }
 
 /* Bloc musique et autres, se positionne sur l'image de gauche */
@@ -240,11 +241,11 @@ body.page-template-page-musique article, body.page-template-page-galery article,
     position: relative;
 }
 
-.entry-content.grid-2-small-1 div:hover #presentation-album, .entry-content.grid-2-small-1 div:hover #presentation-cours {
+.entry-content.grid-2-small-1 div div:hover #presentation-album {
 	display: block !important;
 }
 
-.entry-content.grid-2-small-1 div #presentation-album, .entry-content.grid-2-small-1 div #presentation-cours {
+.entry-content.grid-2-small-1 div div #presentation-album {
 	display: none;
 	position: absolute;
 	z-index: 10;
