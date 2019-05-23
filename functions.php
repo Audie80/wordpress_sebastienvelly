@@ -171,3 +171,12 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 remove_filter('the_content', 'wpautop');
 
+/*
+ * Changer les options par defaut des images
+ */
+ 
+function options_defaut_img() {
+ update_option( 'image_default_link_type', 'file' );
+ update_option( 'image_default_size', 'medium' );
+}
+add_action( 'after_setup_theme', 'options_defaut_img' );

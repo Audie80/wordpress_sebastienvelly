@@ -17,12 +17,8 @@
 			<?php sebastienvelly_post_thumbnail(); ?>
 			<!-- div apparaît seulement en hover, voir dans le css -->
 			<div id="presentation-album">
-				<h3>Présentation du premier album de Sébastien Velly</h3>
-				Après un premier <strong>EP 4 titres</strong> en 2014 « <strong>Plus proche de là-bas</strong> », le <strong>premier album</strong> est sorti en juin
-				2018, intitulé « <strong>L'ordre des choses</strong> », 12 titres mélangeant expériences personnelles et observations, de style <strong>pop-rock</strong> <strong>en français</strong>,
-				retraçant quatre années de <strong>musique</strong>.
-				Le <strong>deuxième album</strong> est en cours de préparation, l'enregistrement est prévu l'hiver prochain.
-				Les <strong>nouvelles chansons</strong> seront jouées cette année en <strong>live</strong>.
+				<h3>Présentation du premier album de Sébastien Velly</h3><br>
+				<?php the_field('texte_en_surimpression'); ?>
 			</div>
 		</div>
 

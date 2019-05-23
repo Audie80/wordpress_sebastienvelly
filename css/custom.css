@@ -1,3 +1,5 @@
+/* ATTENTION : ne pas utiliser la class="photo" : elle est utilisée par la lightbox javascript */
+
 * {
     box-sizing: border-box;
 }
@@ -89,33 +91,20 @@
 
 @keyframes defil-photos {
   0% {
-    background: url("../img/portrait.jpg") no-repeat;
+    background: url("../img/Portrait_de_Sébastien_Velly.jpg") no-repeat;
     background-size: cover;
-    opacity: 1;
-  }
-  10% {
-    opacity: 0.85;
   }
   33% {
-    background: url("../img/photo71.jpg") no-repeat;
+    background: url("../img/Concert_de_Sébastien_Velly_au_Cabaret_Kerhorre_29-09-2018_13.jpg") no-repeat;
     background-size: cover;
-    opacity: 1;
-  }
-  43% {
-    opacity: 0.85;
   }
   66% {
-    background: url("../img/photo81.jpg") no-repeat;
+    background: url("../img/Concert_de_Sébastien_Velly_au_Cabaret_Kerhorre_29-09-2018_4.jpg") no-repeat;
     background-size: cover;
-    opacity: 1;
-  }
-  76% {
-    opacity: 0.85;
   }
   100% {
-    background: url("../img/portrait.jpg") no-repeat;
+    background: url("../img/Portrait_de_Sébastien_Velly.jpg") no-repeat;
     background-size: cover;
-    opacity: 1;
   }
 }
 
@@ -200,7 +189,7 @@ article .grid-2-small-1 img {
 }
 
 /* Bloc musique et autres, se positionne sur l'image de gauche */
-body.page-template-page-musique article, body.page-template-page-photo article, body.page-template-page-photo2 article, body.page-template-page-concert article, body.page-template-page-cours article, body.page-template-page-presse article, body.page-template-page-contact article {
+body.page-template-page-musique article, body.page-template-page-galery article, body.page-template-page-concert article, body.page-template-page-cours article, body.page-template-page-contact article {
     width: 100%;
     position: relative;
 }

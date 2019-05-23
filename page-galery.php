@@ -1,20 +1,24 @@
 <?php
 /**
- * Template Name: Photo2
- * description: >- The template for photo2 pages
+ * Template Name: Galerie
+ * description: >- The template for galery pages (photos and presse)
  * @package sebastienvelly
  */
 
 get_header();
 ?>
 		
+
 		<?php
 		while ( have_posts() ) :
+			
 			the_post();
-
-			get_template_part( 'template-parts/content-photo2', 'page' );
+			get_template_part( 'template-parts/content-galery', 'page' );
 
 		endwhile; // End of the loop.
+
+		
+	  
 		?>
 
 		<aside class="colonne-gauche">
@@ -24,5 +28,5 @@ get_header();
 		</main><!-- #main -->
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();
