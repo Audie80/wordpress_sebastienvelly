@@ -2,6 +2,8 @@
 
 * {
     box-sizing: border-box;
+    --main-black-color: rgba(0, 0, 0, 0.8);
+    --main-white-color: rgba(255, 255, 255, 0.8);
 }
 
 /* header centré à l'écran avec marges de chaque côté */
@@ -20,7 +22,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    background: linear-gradient(rgba(255, 255, 255, 0.8), 85%, rgba(0, 0, 0, 0));
+    background: linear-gradient(var(--main-white-color), 85%, rgba(0, 0, 0, 0));
 }
 
 .main-navigation ul {
@@ -80,7 +82,7 @@
     top: 0;
     bottom: 0;
     width: 49%;
-    border: solid rgba(0, 0, 0, 0.8) 10px;
+    border: solid var(--main-black-color) 10px;
     /* Animation de défilement de plusieurs photos sur la colonne gauche */
     animation-name: defil-photos;
     animation-duration: 15s;
@@ -121,7 +123,7 @@
 	top: 10%;
 	width: 80%;
 	padding: 20px;
-	background: rgba(0, 0, 0, 0.8);
+	background: var(--main-black-color);
 	color: white;
 	border-radius: 5px;
 }
@@ -131,7 +133,7 @@
     width: 50%;
     float: right;
     margin-bottom: 1%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--main-black-color);
     z-index: 1;
     clear: both;
 }
@@ -146,11 +148,11 @@ article {
     width: 50%;
     float: right;
     z-index: 1;
-    border: solid rgba(0, 0, 0, 0.8) 10px;
+    border: solid var(--main-black-color) 10px;
 }
 
 .entry-header {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--main-black-color);
     padding: 5px;
     color: white;
 }
@@ -162,7 +164,7 @@ article {
 
 /* Ajout d'une Div pour un arrière-plan blanc qui ne soit pas en-dessous des bordures transparentes */
 .entry-content {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: var(--main-white-color);
     padding: 3% 5% 3% 5%
 }
 
@@ -231,7 +233,7 @@ body.page-template-page-musique article, body.page-template-page-galery article,
 
 /* Affiche les séparateurs dans la page Concerts */
 .entry-content hr {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--main-black-color);
     height: 1.5px;
     margin: 0;
 }
@@ -241,11 +243,11 @@ body.page-template-page-musique article, body.page-template-page-galery article,
     position: relative;
 }
 
-.entry-content.grid-2-small-1 div div:hover #presentation-album {
+.entry-content.grid-2-small-1 div:hover #presentation-album {
 	display: block !important;
 }
 
-.entry-content.grid-2-small-1 div div #presentation-album {
+.entry-content.grid-2-small-1 div #presentation-album {
 	display: none;
 	position: absolute;
 	z-index: 10;
@@ -253,7 +255,7 @@ body.page-template-page-musique article, body.page-template-page-galery article,
 	top: 10%;
 	width: 80%;
 	padding: 20px;
-	background: rgba(0, 0, 0, 0.8);
+	background: var(--main-black-color);
 	color: white;
 	border-radius: 5px;
 }
@@ -287,7 +289,7 @@ body.page-template-page-musique article, body.page-template-page-galery article,
     text-align: center;
     width: 80%;
     margin: 1% auto 0 auto;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--main-black-color);
 }
 
 .site-footer p {
@@ -305,10 +307,34 @@ body.page-template-page-musique article, body.page-template-page-galery article,
 
 /* Pour téléphones et tablettes en portrait : l'image de gauche se met en arrière-plan */
 @media screen and (max-width: 480px), (orientation: portrait) {
+    /* Change l'opacity de la couleur principale */
+    * {
+        --main-black-color: rgba(0, 0, 0, 0.7);
+        --main-white-color: rgba(255, 255, 255, 0.7);
+    }
+    /* Diminue la taille des polices */
+    h2 {
+        font-size: 2rem;
+    }
+    .has-medium-font-size {
+        font-size: 15px;
+    }
+    /* Réduit les marges du main */
+    .site-main {
+        width: 90%;
+    }
+    .site-header {
+        width: 90%;
+    }
+    .site-footer {
+        width: 90%;
+    }
+    /* Modifie le menu */
     .main-navigation ul li {
         font-size: 1.25em;
         padding: 0.5em 0.5em;
     }
+    /* Met la colonne-gauche en bas */
     .colonne-gauche {
         position: relative;
         width: 100%;
@@ -319,11 +345,24 @@ body.page-template-page-musique article, body.page-template-page-galery article,
         float: none;
         width: 100%;
     }
-    article img {
+    /* Réduit les marges des l'images */
+    .entry-content.actu img {
         padding: 0 10%;
     }
     .galery img {
         height: auto;
         padding: 0;
+    }
+    /* Adapte le design de la page concerts */
+    .wp-block-media-text.has-media-on-the-right {
+        grid-template-areas: none;
+    }
+    .wp-block-media-text {
+        display: block;
+        text-align: center;
+    }
+    /* Espace le contenu et l'image dans la page cours */
+    #contenu-cours {
+        margin-bottom: 5%;
     }
 }

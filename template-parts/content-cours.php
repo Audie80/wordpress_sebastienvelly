@@ -13,7 +13,7 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content grid-2-small-1 has-gutter"> <!-- div pour le fond blanc -->
-		<div>
+		<div id="contenu-cours">
 			<?php the_content(); ?>
         </div>
 
