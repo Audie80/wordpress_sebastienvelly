@@ -1,18 +1,18 @@
 <?php
 /**
- * Template Name: Musique
- * description: >- The template for musique pages
+ * Template Name: Contact
+ * description: >- The template for contact pages
  * @package sebastienvelly
  */
 
 get_header();
 ?>
-
+		
 		<?php
 		while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'template-parts/content-musique', 'page' );
+			get_template_part( 'template-parts/content-contact', 'page' );
 
 		endwhile; // End of the loop.
 		?>

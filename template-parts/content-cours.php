@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying page content in page-musique.php
+ * Template part for displaying page content in page-cours.php
  * @package sebastienvelly
  */
 
@@ -13,11 +13,14 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content grid-2-small-1 has-gutter"> <!-- div pour le fond blanc -->
-			<?php 
-			
-			the_content(); 
-			
-			?>
+		<div id="contenu-cours">
+			<?php the_content(); ?>
+        </div>
+
+		<div>
+			<?php sebastienvelly_post_thumbnail(); ?>
+		</div>
+                
 	</div><!-- .entry-content -->
 
 </article><!-- #post-<?php the_ID(); ?> -->

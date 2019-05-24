@@ -129,9 +129,9 @@ function sebastienvelly_scripts() {
 
 	/* pour ajouter un script js */
 	wp_enqueue_script( 'sebastienvelly-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-	wp_enqueue_script( 'sebastienvelly-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-	wp_enqueue_script( 'sebastienvelly-jquery-1', get_template_directory_uri() . '/js/jquery-1.11.0.min.js', array(), '20151215', true );
-	wp_enqueue_script( 'sebastienvelly-lightbox', get_template_directory_uri() . '/js/lightbox.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'sebastienvelly-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151216', true );
+	wp_enqueue_script( 'sebastienvelly-jquery-1', get_template_directory_uri() . '/js/jquery-1.11.0.min.js', array(), '20151217', true );
+	wp_enqueue_script( 'sebastienvelly-lightbox', get_template_directory_uri() . '/js/lightbox.min.js', array(), '20151218', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -170,3 +170,13 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Remove <p></p> automatically create in the_content()
  */
 remove_filter('the_content', 'wpautop');
+
+/*
+ * Changer les options par defaut des images
+ */
+ 
+function options_defaut_img() {
+ update_option( 'image_default_link_type', 'file' );
+ update_option( 'image_default_size', 'medium' );
+}
+add_action( 'after_setup_theme', 'options_defaut_img' );

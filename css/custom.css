@@ -1,5 +1,9 @@
+/* ATTENTION : ne pas utiliser la class="photo" : elle est utilisée par la lightbox javascript */
+
 * {
     box-sizing: border-box;
+    --main-black-color: rgba(0, 0, 0, 0.8);
+    --main-white-color: rgba(255, 255, 255, 0.8);
 }
 
 /* header centré à l'écran avec marges de chaque côté */
@@ -18,7 +22,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    background: linear-gradient(rgba(255, 255, 255, 0.8), 85%, rgba(0, 0, 0, 0));
+    background: linear-gradient(var(--main-white-color), 85%, rgba(0, 0, 0, 0));
 }
 
 .main-navigation ul {
@@ -78,7 +82,7 @@
     top: 0;
     bottom: 0;
     width: 49%;
-    border: solid rgba(0, 0, 0, 0.8) 10px;
+    border: solid var(--main-black-color) 10px;
     /* Animation de défilement de plusieurs photos sur la colonne gauche */
     animation-name: defil-photos;
     animation-duration: 15s;
@@ -89,42 +93,29 @@
 
 @keyframes defil-photos {
   0% {
-    background: url("../img/portrait.jpg") no-repeat;
+    background: url("../img/Portrait_de_Sébastien_Velly.jpg") no-repeat;
     background-size: cover;
-    opacity: 1;
-  }
-  10% {
-    opacity: 0.85;
   }
   33% {
-    background: url("../img/photo71.jpg") no-repeat;
+    background: url("../img/Concert_de_Sébastien_Velly_au_Cabaret_Kerhorre_29-09-2018_13.jpg") no-repeat;
     background-size: cover;
-    opacity: 1;
-  }
-  43% {
-    opacity: 0.85;
   }
   66% {
-    background: url("../img/photo81.jpg") no-repeat;
+    background: url("../img/Concert_de_Sébastien_Velly_au_Cabaret_Kerhorre_29-09-2018_4.jpg") no-repeat;
     background-size: cover;
-    opacity: 1;
-  }
-  76% {
-    opacity: 0.85;
   }
   100% {
-    background: url("../img/portrait.jpg") no-repeat;
+    background: url("../img/Portrait_de_Sébastien_Velly.jpg") no-repeat;
     background-size: cover;
-    opacity: 1;
   }
 }
 
 /* Texte de présentation, en superposition */
-.colonne-gauche:hover div {
+.colonne-gauche:hover #presentation {
 	display: block !important;
 }
 
-.colonne-gauche div {
+.colonne-gauche #presentation {
 	display: none;
 	position: absolute;
 	z-index: 10;
@@ -132,8 +123,7 @@
 	top: 10%;
 	width: 80%;
 	padding: 20px;
-
-	background: rgba(0, 0, 0, 0.8);
+	background: var(--main-black-color);
 	color: white;
 	border-radius: 5px;
 }
@@ -143,7 +133,7 @@
     width: 50%;
     float: right;
     margin-bottom: 1%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--main-black-color);
     z-index: 1;
     clear: both;
 }
@@ -158,11 +148,11 @@ article {
     width: 50%;
     float: right;
     z-index: 1;
-    border: solid rgba(0, 0, 0, 0.8) 10px;
+    border: solid var(--main-black-color) 10px;
 }
 
 .entry-header {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--main-black-color);
     padding: 5px;
     color: white;
 }
@@ -174,38 +164,60 @@ article {
 
 /* Ajout d'une Div pour un arrière-plan blanc qui ne soit pas en-dessous des bordures transparentes */
 .entry-content {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: var(--main-white-color);
     padding: 3% 5% 3% 5%
 }
 
-article img {
+/* Image de la page d'accueil */
+.entry-content.actu img {
     max-width: 100%;
     padding: 0 20%;
     margin-top: 3%;
+    margin-bottom: 0;
 }
 
-article img#ordre_des_choses {
+/* Autres images */
+article img {
+    max-width: 100%;
+    padding: 0 10%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+/* Image de la page contact */
+article .grid-2-small-1 img {
     padding: 0 3%;
     margin-top: 0;
-}
-
-/* Bloc musique, se positionne sur l'image de gauche */
-body.page-template-page-musique article {
     width: 100%;
 }
 
+/* Bloc musique et autres, se positionne sur l'image de gauche */
+body.page-template-page-musique article, body.page-template-page-galery article, body.page-template-page-concert article, body.page-template-page-cours article, body.page-template-page-contact article {
+    width: 100%;
+    position: relative;
+}
+
 /* Vidéos Youtube */
-.fluid-width-video-wrapper {
-    padding: 2%;
+.entry-content figure {
     display: inline-block;
+}
+
+.entry-content figure iframe {
+    max-width: 100%;
 }
 
 /* Les images de la galerie n'ont pas de padding de 20% */
 .entry-content a {
     display: inline-block;
-    text-decoration: none;
     color: black;
-    margin-top: 2%;
+}
+
+.entry-content a.prec-suiv {
+    float: right;
+}
+
+.entry-content a:hover {
+    font-weight: bold;
 }
 
 .galery {
@@ -213,9 +225,17 @@ body.page-template-page-musique article {
 }
 
 .galery img {
+    width: auto;
     height: 20vh;
     margin-top: 0;
     padding: 1% 1%;
+}
+
+/* Affiche les séparateurs dans la page Concerts */
+.entry-content hr {
+    background-color: var(--main-black-color);
+    height: 1.5px;
+    margin: 0;
 }
 
 /* Texte de présentation de l'album, en superposition sur la page contact*/
@@ -223,11 +243,11 @@ body.page-template-page-musique article {
     position: relative;
 }
 
-.entry-content.grid-2-small-1 div:hover div {
+.entry-content.grid-2-small-1 div:hover #presentation-album {
 	display: block !important;
 }
 
-.entry-content.grid-2-small-1 div div {
+.entry-content.grid-2-small-1 div #presentation-album {
 	display: none;
 	position: absolute;
 	z-index: 10;
@@ -235,9 +255,32 @@ body.page-template-page-musique article {
 	top: 10%;
 	width: 80%;
 	padding: 20px;
-	background: rgba(0, 0, 0, 0.8);
+	background: var(--main-black-color);
 	color: white;
 	border-radius: 5px;
+}
+
+/* Texte centré, uniquement pour la page contact */
+.entry-content.grid-2-small-1 #divForm h2 {
+    text-align: center;
+}
+
+/* Mise en forme du formulaire */
+.entry-content.grid-2-small-1 #divForm {
+    margin: 0 10%;
+}
+
+.entry-content.grid-2-small-1 input, .entry-content.grid-2-small-1 textarea {
+    width: 100%;
+}
+
+.entry-content.grid-2-small-1 label {
+    margin-top: 1%;
+    margin-bottom: -1%;
+}
+
+.entry-content.grid-2-small-1 #envoyer {
+    margin-top: 2%;
 }
 
 /* Footer centré à l'écran avec marges de chaque côté */
@@ -246,7 +289,7 @@ body.page-template-page-musique article {
     text-align: center;
     width: 80%;
     margin: 1% auto 0 auto;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--main-black-color);
 }
 
 .site-footer p {
@@ -256,15 +299,42 @@ body.page-template-page-musique article {
 
 .site-footer a {
     color: white;
-    text-decoration: none;
+}
+
+.site-footer a:hover {
+    font-weight: bold;
 }
 
 /* Pour téléphones et tablettes en portrait : l'image de gauche se met en arrière-plan */
 @media screen and (max-width: 480px), (orientation: portrait) {
+    /* Change l'opacity de la couleur principale */
+    * {
+        --main-black-color: rgba(0, 0, 0, 0.7);
+        --main-white-color: rgba(255, 255, 255, 0.7);
+    }
+    /* Diminue la taille des polices */
+    h2 {
+        font-size: 2rem;
+    }
+    .has-medium-font-size {
+        font-size: 15px;
+    }
+    /* Réduit les marges du main */
+    .site-main {
+        width: 90%;
+    }
+    .site-header {
+        width: 90%;
+    }
+    .site-footer {
+        width: 90%;
+    }
+    /* Modifie le menu */
     .main-navigation ul li {
         font-size: 1.25em;
         padding: 0.5em 0.5em;
     }
+    /* Met la colonne-gauche en bas */
     .colonne-gauche {
         position: relative;
         width: 100%;
@@ -275,11 +345,24 @@ body.page-template-page-musique article {
         float: none;
         width: 100%;
     }
-    article img {
+    /* Réduit les marges des l'images */
+    .entry-content.actu img {
         padding: 0 10%;
     }
     .galery img {
         height: auto;
         padding: 0;
+    }
+    /* Adapte le design de la page concerts */
+    .wp-block-media-text.has-media-on-the-right {
+        grid-template-areas: none;
+    }
+    .wp-block-media-text {
+        display: block;
+        text-align: center;
+    }
+    /* Espace le contenu et l'image dans la page cours */
+    #contenu-cours {
+        margin-bottom: 5%;
     }
 }
