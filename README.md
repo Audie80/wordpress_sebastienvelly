@@ -1,7 +1,6 @@
-# Site du musicien Sébastien Velly - Thème Wordpress
+# Site du musicien Sébastien Velly
 
-Après avoir réalisé le **site Internet** du musicien Sébastien Velly *from scratch* (visible sur Github [ici](https://github.com/Audie80/SebastienVelly)), je l'ai transféré sur **WordPress** en créant un **thème**.
-Le résultat est visible sur www.sebastienvelly.com
+Réalisation du **site Internet** du musicien Sébastien Velly *from scratch*, en **HTML**, **CSS** et **Javascript**.
 
 # Voici les principales fonctionnalités :
 
@@ -11,8 +10,8 @@ Le résultat est visible sur www.sebastienvelly.com
  - des div media/text responsive
  - un **formulaire de contact** en php
  - une **animation CSS** qui affiche plusieurs photos
- - un menu regroupant les différentes pages
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODIxODUwNThdfQ==
+eyJoaXN0b3J5IjpbLTE2MDcyNzUzMV19
 -->
