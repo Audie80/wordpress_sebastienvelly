@@ -1,4 +1,4 @@
-Hello !
+Hello !# Site du musicien Sébastien Velly
 
 Après avoir réalisé le site du musicien Sébastien Velly from scratch, je l'ai transféré sur Wordpress en créant un thème.
 Le résultat est visible sur www.sebastienvelly.com
@@ -11,3 +11,6 @@ Voici les principales fonctionnalités :
 * une animation CSS qui affiche plusieurs photos
 * un menu regroupant les différentes pages
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTEzNjM5NzY3MV19
+-->
