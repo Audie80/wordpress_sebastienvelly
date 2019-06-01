@@ -67,11 +67,8 @@
 			?>
 
 			<div class="facebook">
-				<div class="fb-page" data-href="https://www.facebook.com/sebastienvellymusicien/" data-small-header="true"
-				data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
-				<blockquote cite="https://www.facebook.com/sebastienvellymusicien/" class="fb-xfbml-parse-ignore"><a
-					href="https://www.facebook.com/sebastienvellymusicien/">Page Facebook de Sébastien Velly</a></blockquote>
-				</div>
+				<a href="https://www.facebook.com/sebastienvellymusicien/"><?php echo '<img src="' . get_template_directory_uri() . '/img/logo-facebook.png" alt="Logo Facebook de Sébastien Velly">'; ?></a>
+				<a href="https://www.instagram.com/sebastien_velly/"><?php echo '<img src="' . get_template_directory_uri() . '/img/logo-instagram.png" alt="Logo Instagram de Sébastien Velly">'; ?></a>
 			</div>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
