@@ -61,8 +61,9 @@
     color: black;
 }
 
-.facebook {
-    margin: 1vh 1vw 1vh 1vw;
+.facebook a img {
+    width: 4em;
+    margin: 0.5em;
 }
 
 /* Contenu centré à l'écran avec marges de chaque côté */
@@ -77,7 +78,7 @@
 
 /* Image de gauche, en arrière-plan */
 .colonne-gauche {
-    background: url("../img/portrait.jpg") no-repeat;
+    background: url("../img/Sébastien_Velly_en_concert_au_Cabaret_Kerhorre_29-09-2018_6.jpg") no-repeat;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -93,19 +94,19 @@
 
 @keyframes defil-photos {
   0% {
-    background: url("../img/Portrait_de_Sébastien_Velly.jpg") no-repeat;
+    background: url("../img/Sébastien_Velly_en_concert_au_Cabaret_Kerhorre_29-09-2018_6.jpg") no-repeat;
     background-size: cover;
   }
   33% {
-    background: url("../img/Concert_de_Sébastien_Velly_au_Cabaret_Kerhorre_29-09-2018_13.jpg") no-repeat;
+    background: url("../img/Sébastien_Velly_en_concert_au_Cabaret_Kerhorre_29-09-2018_4.jpg") no-repeat;
     background-size: cover;
   }
   66% {
-    background: url("../img/Concert_de_Sébastien_Velly_au_Cabaret_Kerhorre_29-09-2018_4.jpg") no-repeat;
+    background: url("../img/Sébastien_Velly_en_concert_au_Cabaret_Kerhorre_29-09-2018_2.jpg") no-repeat;
     background-size: cover;
   }
   100% {
-    background: url("../img/Portrait_de_Sébastien_Velly.jpg") no-repeat;
+    background: url("../img/Sébastien_Velly_en_concert_au_Cabaret_Kerhorre_29-09-2018_5.jpg") no-repeat;
     background-size: cover;
   }
 }
