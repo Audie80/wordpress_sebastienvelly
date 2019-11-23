@@ -12,7 +12,7 @@
 		<h1><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content"> <!-- div pour le fond blanc -->
+	<div class="entry-content animation-link"> <!-- div pour le fond blanc -->
 			<?php 
 			
 			the_content(); 

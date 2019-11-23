@@ -12,7 +12,7 @@
 		<h1><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content grid-2-small-1 has-gutter"> <!-- div pour le fond blanc -->
+	<div class="entry-content grid-2-small-1 has-gutter animation-link"> <!-- div pour le fond blanc -->
 		<div id="contenu-cours">
 			<?php the_content(); ?>
         </div>

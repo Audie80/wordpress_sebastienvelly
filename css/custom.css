@@ -6,6 +6,36 @@
     --main-white-color: rgba(255, 255, 255, 0.8);
 }
 
+body {
+    font-size: 14px;
+}
+
+/* Animation des liens */
+a {
+    position: relative;
+    text-decoration: none;
+}
+.entry-content.animation-link a::after, .site-footer a::after, .posts-navigation a::after, a.post-page-numbers::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: 50% 50%;
+    width: 100%;
+    height: 1px;
+    transition: transform 400ms;
+}
+.entry-content.animation-link a::after, a.post-page-numbers::after {
+    background-color: var(--main-black-color);
+}
+.site-footer a::after, .posts-navigation a::after {
+    background-color: var(--main-white-color);
+}
+.entry-content.animation-link a:hover::after, .site-footer a:hover::after, .posts-navigation a:hover::after, a.post-page-numbers:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
 /* header centré à l'écran avec marges de chaque côté */
 .site-header {
     width: 80%;
@@ -24,45 +54,31 @@
     align-content: center;
     background: linear-gradient(var(--main-white-color), 85%, rgba(0, 0, 0, 0));
 }
-
 .main-navigation ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
 }
-
 .main-navigation ul li {
     font-family: 'Permanent Marker', cursive;
-    font-size: 1.5em;
+    font-size: 1.2em;
     display: inline-block;
     padding: 0.5em; 
-    -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-    -webkit-transition: 0.25s;
-    transition: 0.25s;
-    -webkit-transition-property: background-color, color, border, -webkit-box-shadow;
-    transition-property: background-color, color, border, -webkit-box-shadow;
-    transition-property: box-shadow, background-color, color, border;
-    transition-property: box-shadow, background-color, color, border, -webkit-box-shadow;
-}
-
-.main-navigation ul li:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: transparent;
     border: 5px, transparent;
     border-radius: 5px;
-    -webkit-tap-highlight-color: transparent;
+    transition: background-color 400ms;
 }
-
+.main-navigation ul li:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
 .main-navigation ul li a {
-    text-decoration: none;
     color: black;
 }
 
 .facebook a img {
-    width: 4em;
+    width: 2em;
     margin: 0.5em;
 }
 
@@ -74,6 +90,21 @@
     position: relative;
     overflow: auto;
     clear: both;
+}
+
+/* Navigation des articles sur la page Blog */
+.posts-navigation {
+    width: 80%;
+    margin: 1% auto 0 auto;
+    padding: 5px;
+    background-color: var(--main-black-color);
+    text-align: center;
+}
+.screen-reader-text {
+    display: none;
+}
+.posts-navigation a {
+    color: var(--main-white-color);
 }
 
 /* Image de gauche, en arrière-plan */
@@ -156,15 +187,39 @@ article {
     border: solid var(--main-black-color) 10px;
 }
 
+/* Sur la page Blog, les articles se suivent avec une marge entre eux, sauf le dernier article */
+article.blog-article {
+    margin-bottom: 1%;
+}
+article.blog-article:last-child {
+    margin-bottom: 0;
+}
+
+/* Polices des articles */
 .entry-header {
     background-color: var(--main-black-color);
     padding: 5px;
     color: white;
 }
-
 .entry-header h1 {
     font-family: 'Anton', sans-serif;
-    font-size: 3em;
+    font-size: 2.5em;
+    line-height: 1em;
+}
+.entry-content h2 {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.entry-meta, .previous_posts_link {
+    font-size: 0.75em;
+}
+
+.has-medium-font-size {
+    font-size: 1em;
+}
+.has-small-font-size {
+    font-size: 0.85em;
 }
 
 /* Ajout d'une Div pour un arrière-plan blanc qui ne soit pas en-dessous des bordures transparentes */
@@ -197,7 +252,7 @@ article .grid-2-small-1 img {
 }
 
 /* Bloc musique et autres, se positionne sur l'image de gauche */
-body.page-template-page-musique article, body.page-template-page-galery article, body.page-template-page-concert article, body.page-template-page-cours article, body.page-template-page-contact article {
+body.page-template-page-musique article, body.page-template-page-galery article, body.page-template-page-concert article, body.page-template-page-cours article, body.page-template-page-contact article, body.blog article {
     width: 100%;
     position: relative;
 }
@@ -219,10 +274,6 @@ body.page-template-page-musique article, body.page-template-page-galery article,
 
 .entry-content a.prec-suiv {
     float: right;
-}
-
-.entry-content a:hover {
-    font-weight: bold;
 }
 
 .galery {
@@ -247,11 +298,9 @@ body.page-template-page-musique article, body.page-template-page-galery article,
 .entry-content.grid-2-small-1 div {
     position: relative;
 }
-
 .entry-content.grid-2-small-1 div:hover #presentation-album {
 	display: block !important;
 }
-
 .entry-content.grid-2-small-1 div #presentation-album {
 	display: none;
 	position: absolute;
@@ -264,6 +313,12 @@ body.page-template-page-musique article, body.page-template-page-galery article,
 	color: white;
 	border-radius: 5px;
 }
+#presentation h3, #presentation-album h3 {
+    font-size: 1.3em;
+}
+#presentation p, #presentation-album p {
+    font-size: 0.8em;
+}
 
 /* Texte centré, uniquement pour la page contact */
 .entry-content.grid-2-small-1 #divForm h2 {
@@ -274,16 +329,13 @@ body.page-template-page-musique article, body.page-template-page-galery article,
 .entry-content.grid-2-small-1 #divForm {
     margin: 0 10%;
 }
-
 .entry-content.grid-2-small-1 input, .entry-content.grid-2-small-1 textarea {
     width: 100%;
 }
-
 .entry-content.grid-2-small-1 label {
     margin-top: 1%;
     margin-bottom: -1%;
 }
-
 .entry-content.grid-2-small-1 #envoyer {
     margin-top: 2%;
 }
@@ -295,20 +347,16 @@ body.page-template-page-musique article, body.page-template-page-galery article,
     width: 80%;
     margin: 1% auto 0 auto;
     background-color: var(--main-black-color);
+    font-size: 0.75em;
 }
-
 .site-footer p {
-    color: white;
+    color: var(--main-white-color);
     padding: 1em;
 }
-
 .site-footer a {
-    color: white;
+    color: var(--main-white-color);
 }
 
-.site-footer a:hover {
-    font-weight: bold;
-}
 
 /* Pour téléphones et tablettes en portrait : l'image de gauche se met en arrière-plan */
 @media screen and (max-width: 480px), (orientation: portrait) {
@@ -319,28 +367,15 @@ body.page-template-page-musique article, body.page-template-page-galery article,
     }
     /* Diminue la taille des polices */
     h2 {
-        font-size: 2rem;
-    }
-    .has-medium-font-size {
-        font-size: 15px;
+        font-size: 1.3em;
     }
     /* Réduit les marges du main */
-    .site-main {
-        width: 90%;
-    }
-    .site-header {
-        width: 90%;
-    }
-    .site-footer {
+    .site-main, .site-header, .site-footer, .posts-navigation {
         width: 90%;
     }
     /* Modifie le menu */
     .main-navigation ul li {
-        font-size: 1.25em;
-        padding: 0.5em 0.5em;
-    }
-    .facebook a img {
-    width: 3em;
+        padding: 0.2em 0.5em;
     }
     /* Met la colonne-gauche en bas */
     .colonne-gauche {
