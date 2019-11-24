@@ -19,6 +19,14 @@
 		gtag('config', 'UA-140667645-1');
 	</script>
 
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-TCSSV5J');</script>
+	<!-- End Google Tag Manager -->
+
 	<!-- Facebook Pixel Code -->
 	<script>
 		!function(f,b,e,v,n,t,s)
@@ -71,6 +79,11 @@
 	<!-- skip to content pour les malvoyants
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'sebastienvelly' ); ?></a> -->
 
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCSSV5J"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
 	<!-- Script pour le module Facebook -->
   <div id="fb-root"></div>
     <script async defer crossorigin="anonymous"
@@ -87,8 +100,8 @@
 			?>
 
 			<div class="facebook">
-				<a href="https://www.facebook.com/sebastienvellymusicien/"><?php echo '<img src="' . get_template_directory_uri() . '/img/logo-facebook.png" alt="Logo Facebook de Sébastien Velly">'; ?></a>
-				<a href="https://www.instagram.com/sebastien_velly/"><?php echo '<img src="' . get_template_directory_uri() . '/img/logo-instagram.png" alt="Logo Instagram de Sébastien Velly">'; ?></a>
+				<a href="https://www.facebook.com/sebastienvellymusicien/" target="_blank"><?php echo '<img src="' . get_template_directory_uri() . '/img/logo-facebook.png" alt="Logo Facebook de Sébastien Velly">'; ?></a>
+				<a href="https://www.instagram.com/sebastien_velly/" target="_blank"><?php echo '<img src="' . get_template_directory_uri() . '/img/logo-instagram.png" alt="Logo Instagram de Sébastien Velly">'; ?></a>
 			</div>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
