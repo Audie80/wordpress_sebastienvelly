@@ -17,7 +17,7 @@ get_header();
 
 		<?php
 			/* Start the Loop */
-			while ( have_posts() ) :
+			if ( have_posts() ) :
 				the_post();
 
 				/*
@@ -27,7 +27,7 @@ get_header();
 				 */
 				get_template_part( 'template-parts/content-blog', get_post_type() );
 
-			endwhile;
+			endif;
 		?>
 
 		<aside class="colonne-gauche">

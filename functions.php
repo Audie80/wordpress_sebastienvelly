@@ -123,13 +123,13 @@ function sebastienvelly_scripts() {
 
 	/* pour ajouter une feuille de style */
 	wp_enqueue_style( 'sebastienvelly-stylepage', get_template_directory_uri() . '/style.css');
-	wp_enqueue_style( 'sebastienvelly-styleknacss', get_template_directory_uri() . '/css/knacss.css');
-	wp_enqueue_style( 'sebastienvelly-customstyle', get_template_directory_uri() . '/css/custom.css');
-	wp_enqueue_style( 'sebastienvelly-lightbox', get_template_directory_uri() . '/css/lightbox.css');
+	wp_enqueue_style( 'sebastienvelly-styleknacss', get_template_directory_uri() . '/css/knacss.min.css');
+	wp_enqueue_style( 'sebastienvelly-customstyle', get_template_directory_uri() . '/css/custom.min.css');
+	wp_enqueue_style( 'sebastienvelly-lightbox', get_template_directory_uri() . '/css/lightbox.min.css');
 
 	/* pour ajouter un script js */
-	wp_enqueue_script( 'sebastienvelly-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-	wp_enqueue_script( 'sebastienvelly-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151216', true );
+	wp_enqueue_script( 'sebastienvelly-navigation', get_template_directory_uri() . '/js/navigation.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'sebastienvelly-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.min.js', array(), '20151216', true );
 	wp_enqueue_script( 'sebastienvelly-jquery-1', get_template_directory_uri() . '/js/jquery-1.11.0.min.js', array(), '20151217', true );
 	wp_enqueue_script( 'sebastienvelly-lightbox', get_template_directory_uri() . '/js/lightbox.min.js', array(), '20151218', true );
 

@@ -36,11 +36,14 @@ a {
     transform: translateX(-50%) scaleX(1);
 }
 
-/* header centré à l'écran avec marges de chaque côté */
-.site-header {
+/* éléments centrés à l'écran avec marges de chaque côté */
+.site-header, .site-main {
     width: 80%;
-    overflow: hidden;
     margin: 0 auto;
+}
+
+.site-header {
+    overflow: hidden;
 }
 
 /* menu en Flex pour pouvoir aligner verticalement les liens avec le module Facebook */
@@ -48,13 +51,9 @@ a {
     padding-bottom: 1%;
     text-align: center;
     padding-left: 1vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
     background: linear-gradient(var(--main-white-color), 85%, rgba(0, 0, 0, 0));
 }
-.main-navigation ul {
+.main-navigation, .main-navigation ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -74,7 +73,7 @@ a {
     background-color: rgba(255, 255, 255, 0.3);
 }
 .main-navigation ul li a {
-    color: black;
+    color: var(--main-black-color);
 }
 
 .facebook a img {
@@ -84,9 +83,7 @@ a {
 
 /* Contenu centré à l'écran avec marges de chaque côté */
 .site-main {
-    width: 80%;
     height: 100%;
-    margin: 0 auto;
     position: relative;
     overflow: auto;
     clear: both;
@@ -201,7 +198,8 @@ article.blog-article:last-child {
     padding: 5px;
     color: white;
 }
-.entry-header h1 {
+/* Sur la page Blog, ce sont des h2 à la place du h1 */
+.entry-header h1, .entry-header h2.blog {
     font-family: 'Anton', sans-serif;
     font-size: 2.5em;
     line-height: 1em;
@@ -210,11 +208,9 @@ article.blog-article:last-child {
     font-size: 1.3em;
     font-weight: bold;
 }
-
 .entry-meta, .previous_posts_link {
     font-size: 0.75em;
 }
-
 .has-medium-font-size {
     font-size: 1em;
 }
@@ -261,6 +257,10 @@ body.page-template-page-musique article, body.page-template-page-galery article,
 .entry-content figure {
     display: inline-block;
 }
+/* Légendes vidéos centrées */
+.entry-content figcaption {
+    text-align: center;
+}
 
 .entry-content figure iframe {
     max-width: 100%;
@@ -269,7 +269,7 @@ body.page-template-page-musique article, body.page-template-page-galery article,
 /* Les images de la galerie n'ont pas de padding de 20% */
 .entry-content a {
     display: inline-block;
-    color: black;
+    color: var(--main-black-color);
 }
 
 .entry-content a.prec-suiv {
