@@ -23,6 +23,7 @@ get_header();
 
 		<aside class="colonne-gauche">
 			<!-- image en arrière-plan dans le css -->
+			<div id="background-image"></div>
 		</aside>
 		
 		</main><!-- #main -->
