@@ -10,12 +10,38 @@
 <html class="no-js" lang="FR">
 <html <?php language_attributes(); ?>>
 <head>
+
+	<!-- meta par défaut du thème -->
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- meta SV -->
+	<!-- <title>Sébastien VELLY, chanteur auteur compositeur brestois</title> -->
+	<META NAME="KEYWORDS" LANG="FR"
+		CONTENT="Sébastien Velly, Sébastien Velly musicien, Sébastien Velly chanteur, Sébastien Velly auteur compositeur, Sébastien Velly Brest, chanteur brestois, auteur compositeur brestois, musicien brestois, musique pop rock français, musique pop rock, style pop rock français, pop rock français, concerts pop rock, concerts pop rock français, concert musique Brest, concert Brest, concert musique Finistère, concert musique Bretagne, Sébastien Velly guitariste, EP pop rock français, EP pop rock, album pop rock français, album pop rock, groupe musique pop rock, groupe musique pop rock français, groupe musique Brest, groupe musique brestois, groupe musique Finistère, groupe musique Bretagne" />
+	<!-- <META NAME="DESCRIPTION" LANG="FR"
+		CONTENT="Le site de Sébastien VELLY vous présente les dernières news, infos, photos, concerts à venir et extraits musicaux..." /> -->
+	<META NAME="ROBOTS" CONTENT="index,follow" />
+	<META NAME="REVISIT-AFTER" CONTENT="30 days" />
+	<META NAME="COPYRIGHT" CONTENT="Sébastien Velly" />
+	<META NAME="EXPIRES" CONTENT="0" />
+	<META NAME="AUTHOR" CONTENT="Sébastien Velly" />
+
+	<!-- les feuilles de style css sont ajoutées dans le wp_head() grâce au fichier functions.php -->
+	<!-- les scripts js sont ajoutés dans le wp_foot() grâce au fichier functions.php -->
+	<?php wp_head(); ?>
+
+	<!-- SEO : les imports externes doivent se faire APRES les imports internes
+			 + les imports JS doivent se faire APRES les imports CSS -->
+	<link href="https://fonts.googleapis.com/css?family=Anton|Permanent+Marker" rel="stylesheet">
+	<meta name="theme-color" content="#fafafa">
+
 	<!-- Google Tag Manager -->
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-TCSSV5J');</script>
+	})(window,document,'script','dataLayer','GTM-TCSSV5J');</script> -->
 	<!-- End Google Tag Manager -->
 	
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -47,36 +73,13 @@
 	</noscript>
 	<!-- End Facebook Pixel Code -->
 
-	<!-- meta par défaut du thème -->
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<!-- meta SV -->
-	<!-- <title>Sébastien VELLY, chanteur auteur compositeur brestois</title> -->
-	<META NAME="KEYWORDS" LANG="FR"
-		CONTENT="Sébastien Velly, Sébastien Velly musicien, Sébastien Velly chanteur, Sébastien Velly auteur compositeur, Sébastien Velly Brest, chanteur brestois, auteur compositeur brestois, musicien brestois, musique pop rock français, musique pop rock, style pop rock français, pop rock français, concerts pop rock, concerts pop rock français, concert musique Brest, concert Brest, concert musique Finistère, concert musique Bretagne, Sébastien Velly guitariste, EP pop rock français, EP pop rock, album pop rock français, album pop rock, groupe musique pop rock, groupe musique pop rock français, groupe musique Brest, groupe musique brestois, groupe musique Finistère, groupe musique Bretagne" />
-	<!-- <META NAME="DESCRIPTION" LANG="FR"
-		CONTENT="Le site de Sébastien VELLY vous présente les dernières news, infos, photos, concerts à venir et extraits musicaux..." /> -->
-	<META NAME="ROBOTS" CONTENT="index,follow" />
-	<META NAME="REVISIT-AFTER" CONTENT="30 days" />
-	<META NAME="COPYRIGHT" CONTENT="Sébastien Velly" />
-	<META NAME="EXPIRES" CONTENT="0" />
-	<META NAME="AUTHOR" CONTENT="Sébastien Velly" />
-
-	<!-- les feuilles de style css sont ajoutées dans le wp_head() grâce au fichier functions.php -->
-	<!-- les scripts js sont ajoutés dans le wp_foot() grâce au fichier functions.php -->
-	<?php wp_head(); ?>
-
-	<!-- SEO : les imports externes doivent se faire APRES les imports internes -->
-	<link href="https://fonts.googleapis.com/css?family=Anton|Permanent+Marker" rel="stylesheet">
-	<meta name="theme-color" content="#fafafa">
 </head>
 
 <body <?php body_class(); ?>>
 
 	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCSSV5J"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCSSV5J"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
 	<!-- End Google Tag Manager (noscript) -->
 
 	<!-- skip to content pour les malvoyants
