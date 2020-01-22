@@ -17,10 +17,7 @@ get_header();
 		endwhile; // End of the loop.
 		?>
 
-		<aside class="colonne-gauche">
-			<!-- image en arrière-plan dans le css -->
-			<div id="background-image"></div>
-		</aside>
+		<?php include 'aside.php';?>
 		
 		</main><!-- #main -->
 

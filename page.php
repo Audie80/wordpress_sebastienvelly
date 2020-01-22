@@ -17,16 +17,7 @@ get_header();
 		endwhile; // End of the loop.
 		?>
 
-		<aside class="colonne-gauche">
-			<!-- image en arrière-plan dans le css -->
-			<div id="background-image"></div>
-
-			<!-- div apparaît seulement en hover, voir dans le css -->
-			<div id="presentation">
-				<h3>Présentation de Sébastien Velly</h3>
-				<p><?php the_field('texte_en_surimpression'); ?></p>
-			</div>
-		</aside>
+		<?php include 'aside.php';?>
 		
 		</main><!-- #main -->
 

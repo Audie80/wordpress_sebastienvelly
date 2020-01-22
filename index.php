@@ -30,9 +30,7 @@ get_header();
 			endif;
 		?>
 
-		<aside class="colonne-gauche">
-			<!-- image en arrière-plan dans le css -->
-		</aside>
+		<?php include 'aside.php';?>
 
 		</main><!-- #main -->
 

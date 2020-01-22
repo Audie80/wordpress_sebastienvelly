@@ -9,6 +9,7 @@
 
 ?>
 
+	<h1 class="entry-header">Articles plus anciens</h1>
 	<div><!-- div qui permet d'utiliser :last-child sur les articles -->
 
 	<?php 

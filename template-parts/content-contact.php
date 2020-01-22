@@ -17,7 +17,7 @@
 			<?php sebastienvelly_post_thumbnail(); ?>
 			<!-- div apparaît seulement en hover, voir dans le css -->
 			<div id="presentation-album">
-				<h3>Présentation du premier album de Sébastien Velly</h3>
+				<h2>Présentation du premier album de Sébastien Velly</h2>
 				<p><?php the_field('texte_en_surimpression'); ?></p>
 			</div>
 		</div>
