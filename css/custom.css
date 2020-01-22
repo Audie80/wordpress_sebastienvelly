@@ -60,17 +60,32 @@ a {
     align-content: center;
 }
 .main-navigation ul li {
+    position: relative;
     font-family: 'Permanent Marker', cursive;
     font-size: 1.2em;
     display: inline-block;
     padding: 0.5em; 
-    background-color: transparent;
+}
+.main-navigation ul li::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-color: var(--main-white-color);
+    opacity: 0;
     border: 5px, transparent;
     border-radius: 5px;
-    transition: background-color 1000ms;
+    transform: scale(1);
+    transition: opacity 1000ms;
 }
-.main-navigation ul li:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+.main-navigation ul li:hover::after {
+    opacity: 0.7;
+}
+.main-navigation ul li:active {
+    transform: scale(0.95);
 }
 .main-navigation ul li a {
     color: var(--main-black-color);
@@ -79,6 +94,11 @@ a {
 .facebook a img {
     width: 2em;
     margin: 0.5em;
+    transform: scale(1);
+    transition: transform 200ms;
+}
+.facebook a img:hover {
+    transform: scale(0.90);
 }
 
 /* Contenu centré à l'écran avec marges de chaque côté */
@@ -112,40 +132,51 @@ a {
     width: 49%;
     border: solid var(--main-black-color) 10px;
 }
-
-#background-image {
-    height: 100%;
-    background: url("../img/Sébastien_Velly_en_concert_au_Cabaret_Kerhorre_29-09-2018_6.jpg") no-repeat;
+#background-image-1, #background-image-2, #background-image-3, #background-image-4 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    background: var(--bg-image) no-repeat;
     background-size: cover;
-    opacity: 1;
-    /* Animation de défilement de plusieurs photos sur la colonne gauche */
+}
+#background-image-1 {
+    animation: defil-photos 20s infinite;
+    animation-timing-function: ease-in-out;
+}
+#background-image-2 {
     animation: defil-photos 20s 5s infinite;
     animation-timing-function: ease-in-out;
-    animation-fill-mode: both;
 }
-
+#background-image-3 {
+    animation: defil-photos 20s 10s infinite;
+    animation-timing-function: ease-in-out;
+}
+#background-image-4 {
+    animation: defil-photos 20s 15s infinite;
+    animation-timing-function: ease-in-out;
+}
 @keyframes defil-photos {
-  12%,35%,62%,87% {
-    opacity: 0;
-  }
-  10%, 14%, 33%, 37%, 60%, 64%, 85%, 89% {
-    opacity: 0.1;
-  }
-  25% {
-    background: url("../img/Sébastien_Velly_en_concert_au_Cabaret_Kerhorre_29-09-2018_5.jpg") no-repeat;
-    background-size: cover;
-    opacity: 1;
-  }
-  50% {
-    background: url("../img/Sébastien_Velly_en_concert_au_Cabaret_Kerhorre_29-09-2018_2.jpg") no-repeat;
-    background-size: cover;
-    opacity: 1;
-  }
-  75% {
-    background: url("../img/Sébastien_Velly_en_concert_au_Cabaret_Kerhorre_29-09-2018_4.jpg") no-repeat;
-    background-size: cover;
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 /* Texte de présentation, en superposition */
@@ -205,10 +236,17 @@ article.blog-article:last-child {
     color: white;
 }
 /* Sur la page Blog, ce sont des h2 à la place du h1 */
-.entry-header h1, .entry-header h2.blog {
+h1.entry-header, .entry-header h1, .entry-header h2.blog {
     font-family: 'Anton', sans-serif;
     font-size: 2.5em;
     line-height: 1em;
+}
+/* Titre h1 de la page Blog */
+h1.entry-header {
+    position: relative;
+    clear: both;
+    z-index: 10;
+    border: solid transparent 10px;
 }
 .entry-content h2 {
     font-size: 1.3em;
@@ -320,7 +358,7 @@ body.page-template-page-musique article, body.page-template-page-galery article,
 	color: white;
 	border-radius: 5px;
 }
-#presentation h3, #presentation-album h3 {
+#presentation h2, #presentation-album h2 {
     font-size: 1.3em;
 }
 #presentation p, #presentation-album p {
